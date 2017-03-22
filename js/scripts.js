@@ -1,29 +1,28 @@
-var add = function(number1, number2) {
-  return number1 + number2;
-};
-var subtract = function(number1, number2) {
-  return number1 - number2;
-};
-var multiply = function(number1, number2) {
-  return number1 * number2;
-};
-var divide = function(number1, number2) {
-  return number1 / number2;
-};
+$(document).ready(function(){
+  console.log("document  ready");
+  $("#myForm").submit(function(e) {
 
-var number1 = parseInt(prompt("Enter a number:"));
-var operator = prompt("Enter the operator: ('add', 'subtract', 'multiply', 'divide')").toLowerCase();
-var number2 = parseInt(prompt("Enter another number:"));
-if (operator == "add"){
-  alert( add(number1 ,number2));
-}else if (operator == "subtract"){
-  alert(subtract(number1,number2));
-}else if (operator =="multiply"){
-  alert(multiply(number1,number2));
-}else if (operator =="divide"){
-  alert(divide(number1,number2));
-}else {
-alert("wrong input");
-}
-// var result = divide(number1, number2);
-// alert(result);
+    var operator = $("#operator").val();
+    var number1Input = parseInt($("#number1").val());
+    var number2Input = parseInt($("#number2").val());
+
+    if (operator == "add") {
+      alert(number1Input+number2Input);
+    };
+    if (operator == "subtract") {
+      alert(number1Input-number2Input);
+    };
+    if (operator == "multiply") {
+      alert(number1Input*number2Input);
+    };
+    if (operator == "divide") {
+      alert(number1Input/number2Input);
+    };
+    if (operator == null) {
+      alert("Please select a valid operator.");
+    };
+
+    e.preventDefault();
+	});
+
+});

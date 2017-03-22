@@ -2,11 +2,31 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
-    <title>Calculator</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <title></title>
   </head>
   <body>
-    <h1>Calculator</h1>
-    <script src="js/scripts.js"></script>
+
+    <!-- begin container -->
+    <div class="container">
+      <form id="myForm">
+
+        <input id="number1" type="number" placeholder="enter a number"></input><br>
+        <select id="operator">
+          <option selected="selected" disabled>Select an operator</option>
+          <option value="add">add</option>
+          <option value="subtract">subtract</option>
+          <option value="multiply">multiply</option>
+          <option value="divide">divide</option>
+        </select><br>
+
+        <input id="number2" type="number" placeholder="enter another number"></input><br>
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
   </body>
 </html>
