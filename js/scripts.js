@@ -3,20 +3,24 @@ $(document).ready(function(){
   $("#myForm").submit(function(e) {
 
     var operator = $("#operator").val();
-    var number1Input = parseInt($("#number1").val());
-    var number2Input = parseInt($("#number2").val());
+    var number1Input = parseFloat($("#number1").val());
+    var number2Input = parseFloat($("#number2").val());
 
     if (operator == "add") {
-      alert(number1Input+number2Input);
+      var answer = (number1Input+number2Input).toFixed(2)
+      $("#answer p").text(answer);
     };
     if (operator == "subtract") {
-      alert(number1Input-number2Input);
+      var answer = (number1Input-number2Input).toFixed(2)
+      $("#answer p").text(answer);
     };
     if (operator == "multiply") {
-      alert(number1Input*number2Input);
+      var answer = (number1Input*number2Input).toFixed(2)
+      $("#answer p").text(answer);
     };
     if (operator == "divide") {
-      alert(number1Input/number2Input);
+      var answer = (number1Input/number2Input).toFixed(2)
+      $("#answer p").text(answer);
     };
     if (operator == null) {
       alert("Please select a valid operator.");

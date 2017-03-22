@@ -11,22 +11,31 @@
   <body>
 
     <!-- begin container -->
-    <div class="container">
-      <form id="myForm">
+    <!-- <div class="container"> -->
+    <div id="wrapper">
+        <form id="myForm">
 
-        <input id="number1" type="number" placeholder="enter a number"></input><br>
-        <select id="operator">
-          <option selected="selected" disabled>Select an operator</option>
-          <option value="add">add</option>
-          <option value="subtract">subtract</option>
-          <option value="multiply">multiply</option>
-          <option value="divide">divide</option>
-        </select><br>
+          <h3>Calculator</h3>
 
-        <input id="number2" type="number" placeholder="enter another number"></input><br>
+          <input id="number1" type="text" placeholder="enter a number"></input><br>
+          <select id="operator">
+            <option selected="selected" disabled>Select an operator</option>
+            <option value="add">add</option>
+            <option value="subtract">subtract</option>
+            <option value="multiply">multiply</option>
+            <option value="divide">divide</option>
+          </select><br>
 
-        <button type="submit">Submit</button>
-      </form>
+          <input id="number2" type="text" placeholder="enter another number"></input><br>
+
+          <button type="submit">Submit</button>
+        </form>
+
+
+        <div id="answer">
+          <p></p>
+        </div>
+    <!-- end wrapper -->
     </div>
   </body>
 </html>
